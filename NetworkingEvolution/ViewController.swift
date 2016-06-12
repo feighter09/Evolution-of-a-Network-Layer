@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import Alamofire
+import Swift
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
+  convenience init()
+  {
+    self.init(nibName: "ViewController", bundle: nil)
+  }
+  
+  @IBOutlet weak var label: UILabel!
+  
+  override func viewDidLoad()
+  {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let url = "http://httpbin.org/post"
+    let params = ["param": "value"]
+    request(.POST, url, parameters: params).responseJSON { response in
+      switch response.result {
+      case .Success(let result):
+        let responseJSON = result as! [String: AnyObject]
+        self.label.text = responseJSON["args"]["param"] as? String
+      case .Failure(let error):
+        print(error)
+        self.label.text = "Request failed"
+      }
+    }
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
 }
 
