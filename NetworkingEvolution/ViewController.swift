@@ -6,15 +6,12 @@
 //  Copyright © 2016 Lost in Flight. All rights reserved.
 //
 
-import UIKit
 import Alamofire
-import Swift
+import SwiftyJSON
+import UIKit
 
 class ViewController: UIViewController {
-  convenience init()
-  {
-    self.init(nibName: "ViewController", bundle: nil)
-  }
+  convenience init() { self.init(nibName: "ViewController", bundle: nil) }
   
   @IBOutlet weak var label: UILabel!
   
@@ -23,14 +20,14 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     let url = "http://httpbin.org/post"
-    let params = ["param": "value"]
-    request(.POST, url, parameters: params).responseJSON { response in
-      switch response.result {
-      case .Success(let result):
-        let responseJSON = result as! [String: AnyObject]
-        self.label.text = responseJSON["args"]["param"] as? String
-      case .Failure(let error):
-        print(error)
+    let params = ["param": "feighter09"]
+    
+    request(.POST, url, parameters: params).response { _, _, data, error in
+      if let jsonData = data where error == nil {
+        let json = JSON(data: jsonData)
+        self.label.text = "Username: " + json["form"]["param"].stringValue
+      }
+      else {
         self.label.text = "Request failed"
       }
     }
