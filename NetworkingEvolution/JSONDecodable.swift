@@ -9,5 +9,5 @@
 import SwiftyJSON
 
 protocol JSONDecodable {
-  init?(json: JSON)
+  init(json: JSON) throws
 }

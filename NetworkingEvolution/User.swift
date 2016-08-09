@@ -14,10 +14,10 @@ struct User {
 
 // MARK: - JSON Decodable
 extension User: JSONDecodable {
-  init?(json: JSON)
+  init(json: JSON) throws
   {
     guard let name = json["json"]["param"].string
-      else { return nil }
+      else { throw JSONError.MissingKey("json.param") }
     
     self.name = name
   }

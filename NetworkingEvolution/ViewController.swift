@@ -19,15 +19,14 @@ class ViewController: UIViewController {
   override func viewDidLoad()
   {
     super.viewDidLoad()
-
-    fetchUser.perform("feighter09") { (user: User?, error: ErrorType?) in
-      if let user = user {
+    
+    fetchUser.perform("feighter09")
+      .then { user in
         self.label.text = "Username: " + user.name
       }
-      else {
+      .error { error in
         self.label.text = "Request failed"
       }
-    }
   }
 }
 

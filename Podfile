@@ -6,5 +6,11 @@ use_frameworks!
 target 'NetworkingEvolution' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'PromiseKit'
 end
 
+target 'NetworkingEvolutionTests' do
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'PromiseKit'
+end
