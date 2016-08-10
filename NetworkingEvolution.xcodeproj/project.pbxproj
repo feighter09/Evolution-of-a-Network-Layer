@@ -12,6 +12,7 @@
 		D91094C81D0DF93A00722904 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91094C71D0DF93A00722904 /* ViewController.swift */; };
 		D91094CD1D0DF93A00722904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91094CC1D0DF93A00722904 /* Assets.xcassets */; };
 		D91094D01D0DF93A00722904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91094CE1D0DF93A00722904 /* LaunchScreen.storyboard */; };
+		D9393AF11D5B0D08005A703B /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393AF01D5B0D08005A703B /* NetworkClient.swift */; };
 		D9C96EF21D5AC83A00F5875B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C96EF11D5AC83A00F5875B /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		D91094CC1D0DF93A00722904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D91094CF1D0DF93A00722904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D91094D11D0DF93A00722904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9393AF01D5B0D08005A703B /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D9C96EF11D5AC83A00F5875B /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				D91094CE1D0DF93A00722904 /* LaunchScreen.storyboard */,
 				D91094D11D0DF93A00722904 /* Info.plist */,
 				D9C96EF11D5AC83A00F5875B /* ViewController.xib */,
+				D9393AF01D5B0D08005A703B /* NetworkClient.swift */,
 			);
 			path = NetworkingEvolution;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				D91094C81D0DF93A00722904 /* ViewController.swift in Sources */,
 				D91094C61D0DF93A00722904 /* AppDelegate.swift in Sources */,
+				D9393AF11D5B0D08005A703B /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
