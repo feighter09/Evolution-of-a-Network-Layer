@@ -16,6 +16,8 @@
 		D9393B021D5B0F05005A703B /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393AF21D5B0E4A005A703B /* ViewControllerTests.swift */; };
 		D9393B041D5B128A005A703B /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B031D5B128A005A703B /* JSONDecodable.swift */; };
 		D9393B061D5B12BE005A703B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B051D5B12BE005A703B /* User.swift */; };
+		D9393B081D5B14AA005A703B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B071D5B14AA005A703B /* NetworkRequest.swift */; };
+		D9393B0A1D5B1574005A703B /* FetchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B091D5B1574005A703B /* FetchUser.swift */; };
 		D9C96EF21D5AC83A00F5875B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C96EF11D5AC83A00F5875B /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		D9393AFC1D5B0EF4005A703B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9393B031D5B128A005A703B /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		D9393B051D5B12BE005A703B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D9393B071D5B14AA005A703B /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		D9393B091D5B1574005A703B /* FetchUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUser.swift; sourceTree = "<group>"; };
 		D9C96EF11D5AC83A00F5875B /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,8 @@
 				D9393AF01D5B0D08005A703B /* NetworkClient.swift */,
 				D9393B031D5B128A005A703B /* JSONDecodable.swift */,
 				D9393B051D5B12BE005A703B /* User.swift */,
+				D9393B071D5B14AA005A703B /* NetworkRequest.swift */,
+				D9393B091D5B1574005A703B /* FetchUser.swift */,
 			);
 			path = NetworkingEvolution;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 				D91094C61D0DF93A00722904 /* AppDelegate.swift in Sources */,
 				D9393AF11D5B0D08005A703B /* NetworkClient.swift in Sources */,
 				D9393B061D5B12BE005A703B /* User.swift in Sources */,
+				D9393B081D5B14AA005A703B /* NetworkRequest.swift in Sources */,
 				D9393B041D5B128A005A703B /* JSONDecodable.swift in Sources */,
+				D9393B0A1D5B1574005A703B /* FetchUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

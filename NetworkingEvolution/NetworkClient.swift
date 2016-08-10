@@ -10,25 +10,24 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetworkClientType {
-  func makeRequest<Response: JSONDecodable>(url: String,
-                   params: [String : AnyObject],
-                   callback: (Response?, ErrorType?) -> Void)
+  func makeRequest<Request: NetworkRequest>(networkRequest: Request, callback: (NSData?, ErrorType?) -> Void)
 }
 
 struct NetworkClient: NetworkClientType {
-  func makeRequest<Response: JSONDecodable>(url: String,
-                   params: [String : AnyObject],
-                   callback: (Response?, ErrorType?) -> Void)
+  func makeRequest<Request: NetworkRequest>(networkRequest: Request, callback: (NSData?, ErrorType?) -> Void)
   {
-    request(.POST, url, parameters: params).response { _, _, data, error in
-      if let jsonData = data where error == nil {
-        let json = JSON(data: jsonData)
-        let response = Response(json: json)
-        callback(response, nil)
+    request(networkRequest.method,
+            networkRequest.url,
+            parameters: networkRequest.params,
+            encoding: networkRequest.encoding,
+            headers: networkRequest.headers)
+      .response { _, _, data, error in
+        if let data = data where error == nil {
+          callback(data, nil)
+        }
+        else {
+          callback(nil, error)
+        }
       }
-      else {
-        callback(nil, error)
-      }
-    }
   }
 }

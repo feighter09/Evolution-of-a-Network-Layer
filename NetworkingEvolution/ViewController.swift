@@ -14,15 +14,13 @@ class ViewController: UIViewController {
   convenience init() { self.init(nibName: "ViewController", bundle: nil) }
   
   @IBOutlet weak var label: UILabel!
-  var networkClient: NetworkClientType = NetworkClient()
+  var fetchUser = FetchUser()
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
 
-    let url = "http://httpbin.org/post"
-    let params = ["param": "feighter09"]
-    networkClient.makeRequest(url, params: params) { (user: User?, error: ErrorType?) in
+    fetchUser.perform("feighter09") { (user: User?, error: ErrorType?) in
       if let user = user {
         self.label.text = "Username: " + user.name
       }
