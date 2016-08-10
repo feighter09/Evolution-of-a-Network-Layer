@@ -10,12 +10,29 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetworkClientType {
+  func fetchUsername(callback: (String?, ErrorType?) -> Void)
   func makeRequest(url: String,
                    params: [String : AnyObject],
                    callback: (JSON?, ErrorType?) -> Void)
 }
 
 struct NetworkClient: NetworkClientType {
+  func fetchUsername(callback: (String?, ErrorType?) -> Void)
+  {
+    let url = "http://httpbin.org/post"
+    let params = ["param": "feighter09"]
+
+    makeRequest(url, params: params) { json, error in
+      if let json = json,
+         let username = json["form"]["param"].string {
+        callback(username, nil)
+      }
+      else {
+        callback(nil, error)
+      }
+    }
+  }
+  
   func makeRequest(url: String,
                    params: [String : AnyObject],
                    callback: (JSON?, ErrorType?) -> Void)

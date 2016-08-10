@@ -20,12 +20,9 @@ class ViewController: UIViewController {
   {
     super.viewDidLoad()
     
-    let url = "http://httpbin.org/post"
-    let params = ["param": "feighter09"]
-
-    networkClient.makeRequest(url, params: params) { json, error in
-      if let json = json where error == nil {
-        self.label.text = "Username: " + json["form"]["param"].stringValue
+    networkClient.fetchUsername  { username, error in
+      if let username = username {
+        self.label.text = "Username: " + username
       }
       else {
         self.label.text = "Request failed"
