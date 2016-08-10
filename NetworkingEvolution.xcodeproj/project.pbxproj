@@ -14,6 +14,8 @@
 		D91094D01D0DF93A00722904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91094CE1D0DF93A00722904 /* LaunchScreen.storyboard */; };
 		D9393AF11D5B0D08005A703B /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393AF01D5B0D08005A703B /* NetworkClient.swift */; };
 		D9393B021D5B0F05005A703B /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393AF21D5B0E4A005A703B /* ViewControllerTests.swift */; };
+		D9393B041D5B128A005A703B /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B031D5B128A005A703B /* JSONDecodable.swift */; };
+		D9393B061D5B12BE005A703B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9393B051D5B12BE005A703B /* User.swift */; };
 		D9C96EF21D5AC83A00F5875B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C96EF11D5AC83A00F5875B /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		D9393AF21D5B0E4A005A703B /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerTests.swift; path = ../NetworkingEvolution/ViewControllerTests.swift; sourceTree = "<group>"; };
 		D9393AF81D5B0EF4005A703B /* NetworkingEvolutionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingEvolutionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9393AFC1D5B0EF4005A703B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9393B031D5B128A005A703B /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		D9393B051D5B12BE005A703B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D9C96EF11D5AC83A00F5875B /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,8 @@
 				D91094D11D0DF93A00722904 /* Info.plist */,
 				D9C96EF11D5AC83A00F5875B /* ViewController.xib */,
 				D9393AF01D5B0D08005A703B /* NetworkClient.swift */,
+				D9393B031D5B128A005A703B /* JSONDecodable.swift */,
+				D9393B051D5B12BE005A703B /* User.swift */,
 			);
 			path = NetworkingEvolution;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				D91094C81D0DF93A00722904 /* ViewController.swift in Sources */,
 				D91094C61D0DF93A00722904 /* AppDelegate.swift in Sources */,
 				D9393AF11D5B0D08005A703B /* NetworkClient.swift in Sources */,
+				D9393B061D5B12BE005A703B /* User.swift in Sources */,
+				D9393B041D5B128A005A703B /* JSONDecodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

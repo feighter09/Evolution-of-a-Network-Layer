@@ -19,10 +19,12 @@ class ViewController: UIViewController {
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
-    networkClient.fetchUsername  { username, error in
-      if let username = username {
-        self.label.text = "Username: " + username
+
+    let url = "http://httpbin.org/post"
+    let params = ["param": "feighter09"]
+    networkClient.makeRequest(url, params: params) { (user: User?, error: ErrorType?) in
+      if let user = user {
+        self.label.text = "Username: " + user.name
       }
       else {
         self.label.text = "Request failed"

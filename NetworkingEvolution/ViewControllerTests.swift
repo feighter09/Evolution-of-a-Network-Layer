@@ -40,25 +40,20 @@ extension ViewControllerTests {
 
 // MARK: - Mocks
 private struct MockSuccessNetworkClient: NetworkClientType {
-  func fetchUsername(callback: (String?, ErrorType?) -> Void)
-  {
-    callback("feighter09", nil)
-  }
-  
-  func makeRequest(url: String,
+  func makeRequest<Response: JSONDecodable>(url: String,
                    params: [String : AnyObject],
-                   callback: (JSON?, ErrorType?) -> Void)
-  {}
+                   callback: (Response?, ErrorType?) -> Void)
+  {
+    let user = User(name: "feighter09")
+    callback(user as! Response, nil)
+  }
 }
 
 private struct MockFailureNetworkClient: NetworkClientType {
-  func fetchUsername(callback: (String?, ErrorType?) -> Void)
+  func makeRequest<Response: JSONDecodable>(url: String,
+                   params: [String : AnyObject],
+                   callback: (Response?, ErrorType?) -> Void)
   {
     callback(nil, NSError(domain: "", code: -1, userInfo: nil))
   }
-  
-  func makeRequest(url: String,
-                   params: [String : AnyObject],
-                   callback: (JSON?, ErrorType?) -> Void)
-  {}
 }
