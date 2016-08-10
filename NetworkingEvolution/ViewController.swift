@@ -14,6 +14,7 @@ class ViewController: UIViewController {
   convenience init() { self.init(nibName: "ViewController", bundle: nil) }
   
   @IBOutlet weak var label: UILabel!
+  var networkClient: NetworkClientType = NetworkClient()
   
   override func viewDidLoad()
   {
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
     let url = "http://httpbin.org/post"
     let params = ["param": "feighter09"]
 
-    NetworkClient.makeRequest(url, params: params) { json, error in
+    networkClient.makeRequest(url, params: params) { json, error in
       if let json = json where error == nil {
         self.label.text = "Username: " + json["form"]["param"].stringValue
       }
